@@ -1,18 +1,16 @@
 [
   {
-    "name": "正成 红麓书院",
-    "district": "郫都区",
+    "name": "保利金沙天曜",
+    "district": "青羊区",
     "tags": [
-      "楼盘航拍",
-      "低容积",
-      "3D选房"
+      "在售"
     ],
-    "views": "99.0w",
-    "priceRange": null,
-    "location": "103.946595,30.788935",
-    "priceDesc": "13903-16808元\\u002F㎡",
+    "views": "211.3w",
+    "priceRange": "33523-63092",
+    "location": "103.995672,30.700395",
+    "priceDesc": "33523-63092",
     "category": "hot",
-    "id": "gft_5q2j5oiQIOe6"
+    "id": "gft_5L+d5Yip6YeR"
   },
   {
     "name": "天府 光华云境",
@@ -26,7 +24,7 @@
       "3D选房",
       "准现房"
     ],
-    "views": "634.9w",
+    "views": "635.4w",
     "priceRange": "24724-35141",
     "location": "103.948376,30.670814",
     "priceDesc": "24724-35141",
@@ -34,34 +32,32 @@
     "id": "gft_5aSp5bqcIOWF"
   },
   {
-    "name": "保利金沙天曜",
+    "name": "中粮 青雲府",
     "district": "青羊区",
     "tags": [
-      "在售"
+      "即将登记"
     ],
-    "views": "211.2w",
-    "priceRange": "33523-63092",
-    "location": "103.995672,30.700395",
-    "priceDesc": "33523-63092",
+    "views": "201.4w",
+    "priceRange": "38000-51725",
+    "location": "103.947158,30.665003",
+    "priceDesc": "38000-51725元\\u002F㎡",
     "category": "hot",
-    "id": "gft_5L+d5Yip6YeR"
+    "id": "gft_5Lit57KuIOmd"
   },
   {
-    "name": "国宾泊萃",
-    "district": "金牛区",
+    "name": "正成 红麓书院",
+    "district": "郫都区",
     "tags": [
       "楼盘航拍",
-      "近地铁",
       "低容积",
-      "教育资源",
       "3D选房"
     ],
-    "views": "597.9w",
-    "priceRange": "19782-24258",
-    "location": "103.999863,30.743415",
-    "priceDesc": "19782-24258",
+    "views": "99.1w",
+    "priceRange": null,
+    "location": "103.946595,30.788935",
+    "priceDesc": "13903-16808元\\u002F㎡",
     "category": "hot",
-    "id": "gft_5Zu95a6+5rOK"
+    "id": "gft_5q2j5oiQIOe6"
   },
   {
     "name": "新绿色 G29元岛",
@@ -72,59 +68,12 @@
       "低容积",
       "3D选房"
     ],
-    "views": "76.7w",
+    "views": "77.0w",
     "priceRange": null,
     "location": "104.041979,30.534329",
     "priceDesc": null,
     "category": "hot",
     "id": "gft_5paw57u/6Imy"
-  },
-  {
-    "name": "金牛西派御府",
-    "district": "金牛区",
-    "tags": [
-      "楼盘航拍",
-      "金牛区第一座西派",
-      "教育资源",
-      "3D选房",
-      "四地铁"
-    ],
-    "views": "1186.2w",
-    "priceRange": "31195-40705",
-    "location": "104.031846,30.703759",
-    "priceDesc": "31195-40705",
-    "category": "hot",
-    "id": "gft_6YeR54mb6KW/"
-  },
-  {
-    "name": "中粮 青雲府",
-    "district": "青羊区",
-    "tags": [
-      "即将登记"
-    ],
-    "views": "200.6w",
-    "priceRange": "38000-51725",
-    "location": "103.947158,30.665003",
-    "priceDesc": "38000-51725元\\u002F㎡",
-    "category": "hot",
-    "id": "gft_5Lit57KuIOmd"
-  },
-  {
-    "name": "玖悦府",
-    "district": "天府新区",
-    "tags": [
-      "楼盘航拍",
-      "刚需首选",
-      "百亩大盘",
-      "教育资源",
-      "品质住宅"
-    ],
-    "views": "3066.5w",
-    "priceRange": null,
-    "location": "104.113743,30.487621",
-    "priceDesc": null,
-    "category": "hot",
-    "id": "gft_546W5oKm5bqc"
   },
   {
     "name": "华天 龙湖 杉峯",
@@ -159,6 +108,70 @@
     "id": "gft_5rex5Lia5rOw"
   },
   {
+    "name": "越秀天悦云萃Ⅲ",
+    "district": "成华区",
+    "tags": [
+      "在售"
+    ],
+    "views": "1935.5w",
+    "priceRange": null,
+    "location": "104.13959,30.658888",
+    "priceDesc": "34649-46668元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_6LaK56eA5aSp"
+  },
+  {
+    "name": "金牛西派御府",
+    "district": "金牛区",
+    "tags": [
+      "楼盘航拍",
+      "金牛区第一座西派",
+      "教育资源",
+      "3D选房",
+      "四地铁"
+    ],
+    "views": "1186.2w",
+    "priceRange": "31195-40705",
+    "location": "104.031846,30.703759",
+    "priceDesc": "31195-40705",
+    "category": "hot",
+    "id": "gft_6YeR54mb6KW/"
+  },
+  {
+    "name": "国宾泊萃",
+    "district": "金牛区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁",
+      "低容积",
+      "教育资源",
+      "3D选房"
+    ],
+    "views": "597.9w",
+    "priceRange": "19782-24258",
+    "location": "103.999863,30.743415",
+    "priceDesc": "19782-24258",
+    "category": "hot",
+    "id": "gft_5Zu95a6+5rOK"
+  },
+  {
+    "name": "玖悦府",
+    "district": "天府新区",
+    "tags": [
+      "楼盘航拍",
+      "刚需首选",
+      "百亩大盘",
+      "教育资源",
+      "品质住宅"
+    ],
+    "views": "3066.5w",
+    "priceRange": null,
+    "location": "104.113743,30.487621",
+    "priceDesc": null,
+    "category": "hot",
+    "id": "gft_546W5oKm5bqc"
+  },
+  {
     "name": "西派天麓",
     "district": "天府新区",
     "tags": [
@@ -173,19 +186,6 @@
     "priceDesc": null,
     "category": "hot",
     "id": "gft_6KW/5rS+5aSp"
-  },
-  {
-    "name": "越秀天悦云萃Ⅲ",
-    "district": "成华区",
-    "tags": [
-      "在售"
-    ],
-    "views": "1935.5w",
-    "priceRange": null,
-    "location": "104.13959,30.658888",
-    "priceDesc": "34649-46668元\\u002F㎡",
-    "category": "hot",
-    "id": "gft_6LaK56eA5aSp"
   },
   {
     "name": "华润置地 天宸上院",
@@ -238,6 +238,90 @@
     "priceDesc": null,
     "category": "hot",
     "id": "gft_6auY5oqV6Zuy"
+  },
+  {
+    "name": "邦泰 揽境",
+    "district": "新都区",
+    "tags": [
+      "楼盘航拍",
+      "即将登记"
+    ],
+    "views": "159.6w",
+    "priceRange": "11560-15140",
+    "location": "104.183201,30.794475",
+    "priceDesc": "11560-15140元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_6YKm5rOwIOaP"
+  },
+  {
+    "name": "中海 翡悦天華",
+    "district": "天府新区",
+    "tags": [
+      "楼盘航拍",
+      "三地铁",
+      "教育资源"
+    ],
+    "views": "322.3w",
+    "priceRange": "35000-46500",
+    "location": "104.093621,30.432437",
+    "priceDesc": "35000-46500元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_5Lit5rW3IOe/"
+  },
+  {
+    "name": "中铁 先锋艺术城",
+    "district": "金牛区",
+    "tags": [
+      "即将取证"
+    ],
+    "views": "68.5w",
+    "priceRange": null,
+    "location": "104.054981,30.679838",
+    "priceDesc": null,
+    "category": "hot",
+    "id": "gft_5Lit6ZOBIOWF"
+  },
+  {
+    "name": "中建 匠宸元启",
+    "district": "成华区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁",
+      "教育资源"
+    ],
+    "views": "513.7w",
+    "priceRange": "33500-33750",
+    "location": "104.134169,30.689516",
+    "priceDesc": "33500-33750",
+    "category": "hot",
+    "id": "gft_5Lit5bu6IOWM"
+  },
+  {
+    "name": "龙湖滨江峯萃",
+    "district": "成华区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁"
+    ],
+    "views": "255.2w",
+    "priceRange": null,
+    "location": "104.131844,30.641768",
+    "priceDesc": "33892-40069元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_6b6Z5rmW5ruo"
+  },
+  {
+    "name": "嘉禾 朗宸府",
+    "district": "双流区",
+    "tags": [
+      "即将登记"
+    ],
+    "views": "71.7w",
+    "priceRange": "23500-28858",
+    "location": "104.008949,30.494371",
+    "priceDesc": "23500-28858元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_5ZiJ56a+IOac"
   },
   {
     "name": "招商玺",
@@ -353,19 +437,6 @@
     "id": "gft_5oKm6JOJ5Lmd"
   },
   {
-    "name": "中铁 先锋艺术城",
-    "district": "金牛区",
-    "tags": [
-      "即将取证"
-    ],
-    "views": "69.9w",
-    "priceRange": null,
-    "location": "104.054981,30.679838",
-    "priceDesc": null,
-    "category": "forthcoming_sale",
-    "id": "gft_5Lit6ZOBIOWF"
-  },
-  {
     "name": "锦官天府",
     "district": "天府新区",
     "tags": [
@@ -400,20 +471,6 @@
     "id": "gft_5paw6YO95qWg"
   },
   {
-    "name": "邦泰 揽境",
-    "district": "新都区",
-    "tags": [
-      "楼盘航拍",
-      "即将登记"
-    ],
-    "views": "156.9w",
-    "priceRange": "11560-15140",
-    "location": "104.183201,30.794475",
-    "priceDesc": "11560-15140元\\u002F㎡",
-    "category": "latest_opening",
-    "id": "gft_6YKm5rOwIOaP"
-  },
-  {
     "name": "麓湖 丽世缦华",
     "district": "天府新区",
     "tags": [
@@ -444,33 +501,6 @@
     "id": "gft_6YeR6J6N5Z+O"
   },
   {
-    "name": "嘉禾 朗宸府",
-    "district": "双流区",
-    "tags": [
-      "即将登记"
-    ],
-    "views": "73.5w",
-    "priceRange": "23500-28858",
-    "location": "104.008949,30.494371",
-    "priceDesc": "23500-28858元\\u002F㎡",
-    "category": "latest_opening",
-    "id": "gft_5ZiJ56a+IOac"
-  },
-  {
-    "name": "龙湖滨江峯萃",
-    "district": "成华区",
-    "tags": [
-      "楼盘航拍",
-      "近地铁"
-    ],
-    "views": "258.6w",
-    "priceRange": null,
-    "location": "104.131844,30.641768",
-    "priceDesc": "33892-40069元\\u002F㎡",
-    "category": "latest_opening",
-    "id": "gft_6b6Z5rmW5ruo"
-  },
-  {
     "name": "保利创智锦城",
     "district": "天府新区",
     "tags": [
@@ -494,7 +524,7 @@
       "3D选房",
       "近地铁"
     ],
-    "views": "1239.0w",
+    "views": "1239.1w",
     "priceRange": "36017-47454",
     "location": null,
     "priceDesc": "36017-47454",
@@ -516,7 +546,7 @@
       "准现房",
       "三地铁"
     ],
-    "views": "9365.8w",
+    "views": "9366.0w",
     "priceRange": "19041-29791",
     "location": null,
     "priceDesc": "19041-29791",
@@ -537,7 +567,7 @@
       "低容积",
       "3D选房"
     ],
-    "views": "6931.3w",
+    "views": "6931.5w",
     "priceRange": "15315-28169",
     "location": null,
     "priceDesc": "15315-28169",
@@ -556,7 +586,7 @@
       "3D选房",
       "三地铁"
     ],
-    "views": "6638.3w",
+    "views": "6638.6w",
     "priceRange": null,
     "location": null,
     "priceDesc": null,
@@ -576,7 +606,7 @@
       "3D选房",
       "近地铁"
     ],
-    "views": "4332.3w",
+    "views": "4332.5w",
     "priceRange": "16586-31334",
     "location": null,
     "priceDesc": "16586-31334",
@@ -592,7 +622,7 @@
       "近地铁",
       "教育资源"
     ],
-    "views": "4093.5w",
+    "views": "4093.6w",
     "priceRange": "22486-34904",
     "location": null,
     "priceDesc": "22486-34904",
@@ -653,23 +683,6 @@
     "id": "gft_6b6Z5r2t5a+6"
   },
   {
-    "name": "中国铁建 西派金沙",
-    "district": "青羊区",
-    "tags": [
-      "在售",
-      "改善置业",
-      "品牌房企",
-      "以旧换新",
-      "教育资源"
-    ],
-    "views": "2903.1w",
-    "priceRange": null,
-    "location": null,
-    "priceDesc": null,
-    "category": "surplus",
-    "id": "gft_5Lit5Zu96ZOB"
-  },
-  {
     "name": "中铁卓萃",
     "district": "天府新区",
     "tags": [
@@ -717,5 +730,775 @@
     "priceDesc": "17689-25096元\\u002F㎡",
     "category": "search_hide",
     "id": "gft_5paw5biM5pyb"
+  },
+  {
+    "name": "金融城交子缦华",
+    "district": "锦江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.065,30.585",
+    "priceDesc": "77000元/㎡",
+    "category": "seed",
+    "id": "seed_6YeR6J6N5Z+O"
+  },
+  {
+    "name": "鹭湾锦上映",
+    "district": "锦江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.108,30.618",
+    "priceDesc": "32000元/㎡",
+    "category": "seed",
+    "id": "seed_6bmt5rm+6ZSm"
+  },
+  {
+    "name": "雍景·白鹭湾",
+    "district": "锦江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.122,30.583",
+    "priceDesc": "620-800万/套",
+    "category": "seed",
+    "id": "seed_6ZuN5pmvwrfn"
+  },
+  {
+    "name": "锦宸院Ⅱ期上玺",
+    "district": "锦江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.075,30.638",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_6ZSm5a646Zmi"
+  },
+  {
+    "name": "新绿色 J57半岛",
+    "district": "锦江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.082,30.627",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_5paw57u/6Imy"
+  },
+  {
+    "name": "邦泰·藏锦",
+    "district": "锦江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.069,30.644",
+    "priceDesc": "高端",
+    "category": "seed",
+    "id": "seed_6YKm5rOwwrfo"
+  },
+  {
+    "name": "贝宸S1",
+    "district": "锦江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.073,30.607",
+    "priceDesc": "2000万起/套",
+    "category": "seed",
+    "id": "seed_6LSd5a64UzE="
+  },
+  {
+    "name": "青羊馥棠",
+    "district": "青羊区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.978,30.672",
+    "priceDesc": "66309-81309元/㎡",
+    "category": "seed",
+    "id": "seed_6Z2S576K6aal"
+  },
+  {
+    "name": "源启金沙",
+    "district": "青羊区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.995,30.700",
+    "priceDesc": "68690-85675元/㎡",
+    "category": "seed",
+    "id": "seed_5rqQ5ZCv6YeR"
+  },
+  {
+    "name": "观云苑",
+    "district": "青羊区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.008,30.682",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_6KeC5LqR6IuR"
+  },
+  {
+    "name": "通锦阁",
+    "district": "青羊区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.052,30.683",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_6YCa6ZSm6ZiB"
+  },
+  {
+    "name": "聚亿江安锦城",
+    "district": "青羊区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.923,30.659",
+    "priceDesc": "15888元/㎡",
+    "category": "seed",
+    "id": "seed_6IGa5Lq/5rGf"
+  },
+  {
+    "name": "中铁建·西派善境",
+    "district": "武侯区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.036,30.626",
+    "priceDesc": "32500元/㎡",
+    "category": "seed",
+    "id": "seed_5Lit6ZOB5bu6"
+  },
+  {
+    "name": "越秀金茂·天鹭满园",
+    "district": "武侯区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.052,30.631",
+    "priceDesc": "433万起/套",
+    "category": "seed",
+    "id": "seed_6LaK56eA6YeR"
+  },
+  {
+    "name": "复地崑玉锦城",
+    "district": "武侯区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.042,30.601",
+    "priceDesc": "20304元/㎡",
+    "category": "seed",
+    "id": "seed_5aSN5Zyw5bSR"
+  },
+  {
+    "name": "中国铁建领樾",
+    "district": "武侯区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.011,30.641",
+    "priceDesc": "27000元/㎡",
+    "category": "seed",
+    "id": "seed_5Lit5Zu96ZOB"
+  },
+  {
+    "name": "华润·天宸上院",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.147,30.659",
+    "priceDesc": "425-1050万/套",
+    "category": "seed",
+    "id": "seed_5Y2O5ramwrfl"
+  },
+  {
+    "name": "华润·华宸府",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.132,30.663",
+    "priceDesc": "650-1050万/套",
+    "category": "seed",
+    "id": "seed_5Y2O5ramwrfl"
+  },
+  {
+    "name": "越秀·望悦",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.105,30.660",
+    "priceDesc": "540万起/套",
+    "category": "seed",
+    "id": "seed_6LaK56eAwrfm"
+  },
+  {
+    "name": "招商·锦城序",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.117,30.675",
+    "priceDesc": "420-650万/套",
+    "category": "seed",
+    "id": "seed_5oub5ZWGwrfp"
+  },
+  {
+    "name": "绿城·润百合",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.088,30.694",
+    "priceDesc": "36000-45000元/㎡",
+    "category": "seed",
+    "id": "seed_57u/5Z+Owrfm"
+  },
+  {
+    "name": "锦城拾云",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.125,30.689",
+    "priceDesc": "23913元/㎡",
+    "category": "seed",
+    "id": "seed_6ZSm5Z+O5ou+"
+  },
+  {
+    "name": "蜀道翰林府",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.118,30.678",
+    "priceDesc": "30000元/㎡",
+    "category": "seed",
+    "id": "seed_6JyA6YGT57+w"
+  },
+  {
+    "name": "中建匠心里",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.103,30.707",
+    "priceDesc": "26000元/㎡",
+    "category": "seed",
+    "id": "seed_5Lit5bu65Yyg"
+  },
+  {
+    "name": "成华和悦广场",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.119,30.660",
+    "priceDesc": "总价60万起",
+    "category": "seed",
+    "id": "seed_5oiQ5Y2O5ZKM"
+  },
+  {
+    "name": "滨江峯萃名邸",
+    "district": "成华区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.125,30.702",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_5ruo5rGf5bOv"
+  },
+  {
+    "name": "保利西堂和煦",
+    "district": "金牛区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.998,30.716",
+    "priceDesc": "23500元/㎡",
+    "category": "seed",
+    "id": "seed_5L+d5Yip6KW/"
+  },
+  {
+    "name": "雍景致臻天府",
+    "district": "金牛区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.021,30.702",
+    "priceDesc": "26000元/㎡",
+    "category": "seed",
+    "id": "seed_6ZuN5pmv6Ie0"
+  },
+  {
+    "name": "中海翡悦天華",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.078,30.494",
+    "priceDesc": "高端",
+    "category": "seed",
+    "id": "seed_5Lit5rW357+h"
+  },
+  {
+    "name": "招商·时代公园",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.071,30.473",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_5oub5ZWGwrfm"
+  },
+  {
+    "name": "麓湖生态城·天琴澄音",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.058,30.468",
+    "priceDesc": "高端",
+    "category": "seed",
+    "id": "seed_6bqT5rmW55Sf"
+  },
+  {
+    "name": "保利天府瑧悦",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.085,30.467",
+    "priceDesc": "33000元/㎡",
+    "category": "seed",
+    "id": "seed_5L+d5Yip5aSp"
+  },
+  {
+    "name": "建发璞云",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.082,30.457",
+    "priceDesc": "23000元/㎡",
+    "category": "seed",
+    "id": "seed_5bu65Y+R55Ke"
+  },
+  {
+    "name": "阅天府",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.077,30.462",
+    "priceDesc": "34500元/㎡",
+    "category": "seed",
+    "id": "seed_6ZiF5aSp5bqc"
+  },
+  {
+    "name": "卓萃名邸",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.093,30.481",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_5Y2T6JCD5ZCN"
+  },
+  {
+    "name": "蔚蓝卡地亚天览",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.069,30.455",
+    "priceDesc": "高端",
+    "category": "seed",
+    "id": "seed_6JSa6JOd5Y2h"
+  },
+  {
+    "name": "金融城8号",
+    "district": "高新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.063,30.580",
+    "priceDesc": "高端",
+    "category": "seed",
+    "id": "seed_6YeR6J6N5Z+O"
+  },
+  {
+    "name": "朗基和今缘",
+    "district": "高新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.053,30.552",
+    "priceDesc": "23700元/㎡",
+    "category": "seed",
+    "id": "seed_5pyX5Z+65ZKM"
+  },
+  {
+    "name": "中海湖光玖里",
+    "district": "双流区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.981,30.536",
+    "priceDesc": "25772-29683元/㎡",
+    "category": "seed",
+    "id": "seed_5Lit5rW35rmW"
+  },
+  {
+    "name": "龙湖天府晴川",
+    "district": "双流区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.010,30.558",
+    "priceDesc": "26558-29598元/㎡",
+    "category": "seed",
+    "id": "seed_6b6Z5rmW5aSp"
+  },
+  {
+    "name": "银河玺悦和鸣",
+    "district": "双流区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.928,30.579",
+    "priceDesc": "17000元/㎡",
+    "category": "seed",
+    "id": "seed_6ZO25rKz5466"
+  },
+  {
+    "name": "朗栖成园",
+    "district": "双流区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.948,30.591",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_5pyX5qCW5oiQ"
+  },
+  {
+    "name": "东城·金茂晓棠",
+    "district": "龙泉驿区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.232,30.583",
+    "priceDesc": "16769-25117元/㎡",
+    "category": "seed",
+    "id": "seed_5Lic5Z+Owrfp"
+  },
+  {
+    "name": "国贸人居海上蓉屿",
+    "district": "龙泉驿区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.220,30.594",
+    "priceDesc": "24000元/㎡",
+    "category": "seed",
+    "id": "seed_5Zu96LS45Lq6"
+  },
+  {
+    "name": "新希望长粼府",
+    "district": "龙泉驿区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.197,30.571",
+    "priceDesc": "23337元/㎡",
+    "category": "seed",
+    "id": "seed_5paw5biM5pyb"
+  },
+  {
+    "name": "上璟润府",
+    "district": "龙泉驿区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.213,30.589",
+    "priceDesc": "25185元/㎡",
+    "category": "seed",
+    "id": "seed_5LiK55Kf5ram"
+  },
+  {
+    "name": "明信四季东安",
+    "district": "龙泉驿区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.248,30.569",
+    "priceDesc": "19700元/㎡",
+    "category": "seed",
+    "id": "seed_5piO5L+h5Zub"
+  },
+  {
+    "name": "冠城玲珑湾",
+    "district": "龙泉驿区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.183,30.587",
+    "priceDesc": "21000元/㎡",
+    "category": "seed",
+    "id": "seed_5Yag5Z+O546y"
+  },
+  {
+    "name": "嘉禾宸府",
+    "district": "温江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.845,30.696",
+    "priceDesc": "14500元/㎡",
+    "category": "seed",
+    "id": "seed_5ZiJ56a+5a64"
+  },
+  {
+    "name": "九联龙湖公园玖序",
+    "district": "温江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.831,30.705",
+    "priceDesc": "17500元/㎡",
+    "category": "seed",
+    "id": "seed_5Lmd6IGU6b6Z"
+  },
+  {
+    "name": "中国铁建光华宸语府",
+    "district": "温江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.857,30.689",
+    "priceDesc": "18500元/㎡",
+    "category": "seed",
+    "id": "seed_5Lit5Zu96ZOB"
+  },
+  {
+    "name": "汇厦德商·光华天玺",
+    "district": "温江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.866,30.698",
+    "priceDesc": "16000元/㎡",
+    "category": "seed",
+    "id": "seed_5rGH5Y6m5b63"
+  },
+  {
+    "name": "西盛·粼湖天境",
+    "district": "郫都区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.896,30.798",
+    "priceDesc": "5568-15782元/㎡",
+    "category": "seed",
+    "id": "seed_6KW/55ubwrfn"
+  },
+  {
+    "name": "菁弘万科樟宜星光",
+    "district": "郫都区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.916,30.765",
+    "priceDesc": "13685元/㎡",
+    "category": "seed",
+    "id": "seed_6I+B5byY5LiH"
+  },
+  {
+    "name": "汇尚雅居",
+    "district": "新都区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.172,30.824",
+    "priceDesc": "14500元/㎡",
+    "category": "seed",
+    "id": "seed_5rGH5bCa6ZuF"
+  },
+  {
+    "name": "东湖金座",
+    "district": "新都区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.165,30.809",
+    "priceDesc": "7800元/㎡",
+    "category": "seed",
+    "id": "seed_5Lic5rmW6YeR"
+  },
+  {
+    "name": "川酒香璟台",
+    "district": "新都区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.192,30.788",
+    "priceDesc": "9000元/㎡",
+    "category": "seed",
+    "id": "seed_5bed6YWS6aaZ"
+  },
+  {
+    "name": "万科产投·熙园甲第",
+    "district": "崇州市",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.674,30.632",
+    "priceDesc": "12396元/㎡",
+    "category": "seed",
+    "id": "seed_5LiH56eR5Lqn"
+  },
+  {
+    "name": "唐人街",
+    "district": "崇州市",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.678,30.624",
+    "priceDesc": "10200元/㎡",
+    "category": "seed",
+    "id": "seed_5ZSQ5Lq66KGX"
+  },
+  {
+    "name": "青江山水韵",
+    "district": "都江堰市",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.641,30.937",
+    "priceDesc": "7300-9200元/㎡",
+    "category": "seed",
+    "id": "seed_6Z2S5rGf5bGx"
+  },
+  {
+    "name": "堰上明珠",
+    "district": "都江堰市",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.653,30.989",
+    "priceDesc": "7500元/㎡",
+    "category": "seed",
+    "id": "seed_5aCw5LiK5piO"
+  },
+  {
+    "name": "堰山和畔",
+    "district": "都江堰市",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.665,30.975",
+    "priceDesc": "8500元/㎡",
+    "category": "seed",
+    "id": "seed_5aCw5bGx5ZKM"
+  },
+  {
+    "name": "天府龙智1号",
+    "district": "新津区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.813,30.411",
+    "priceDesc": "10500元/㎡",
+    "category": "seed",
+    "id": "seed_5aSp5bqc6b6Z"
+  },
+  {
+    "name": "津城雅苑",
+    "district": "新津区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.819,30.405",
+    "priceDesc": "11500元/㎡",
+    "category": "seed",
+    "id": "seed_5rSl5Z+O6ZuF"
+  },
+  {
+    "name": "湔投峰樾",
+    "district": "彭州市",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.946,30.989",
+    "priceDesc": "10800元/㎡",
+    "category": "seed",
+    "id": "seed_5rmU5oqV5bOw"
+  },
+  {
+    "name": "龙兴合锦小区",
+    "district": "彭州市",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "103.941,30.977",
+    "priceDesc": "待定",
+    "category": "seed",
+    "id": "seed_6b6Z5YW05ZCI"
+  },
+  {
+    "name": "星城九天苑",
+    "district": "武侯区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.033,30.617",
+    "priceDesc": "已售罄",
+    "category": "seed",
+    "id": "seed_5pif5Z+O5Lmd"
+  },
+  {
+    "name": "绿城凤栖鹭鸣",
+    "district": "锦江区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.110,30.593",
+    "priceDesc": "已售罄",
+    "category": "seed",
+    "id": "seed_57u/5Z+O5Yek"
+  },
+  {
+    "name": "高投印悦府",
+    "district": "高新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.052,30.565",
+    "priceDesc": "已售罄",
+    "category": "seed",
+    "id": "seed_6auY5oqV5Y2w"
+  },
+  {
+    "name": "中海麓湖公馆",
+    "district": "天府新区",
+    "tags": [],
+    "views": null,
+    "priceRange": null,
+    "location": "104.062,30.472",
+    "priceDesc": "已售罄",
+    "category": "seed",
+    "id": "seed_5Lit5rW36bqT"
   }
 ]

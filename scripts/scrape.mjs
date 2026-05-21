@@ -3,13 +3,14 @@
  * 从 cdgoufangtong.com SSR 页面提取真实成都楼盘数据
  * 运行: node scripts/scrape.mjs
  */
-import { writeFileSync, mkdirSync } from "fs";
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from "fs";
 import { join } from "path";
 
 const BASE = "https://www.cdgoufangtong.com";
 const CATEGORIES = ["hot", "forthcoming_sale", "latest_opening", "surplus", "search_hide"];
 const MAX_PAGES = 20;
 const DATA_DIR = join(import.meta.dirname, "..", "public", "data");
+const SEED_FILE = join(import.meta.dirname, "seed-projects.json");
 
 async function fetchPage(path) {
   const res = await fetch(BASE + path, {
@@ -174,7 +175,28 @@ async function main() {
     }
   }
 
-  console.log(`\nTotal unique projects: ${unique.length}`);
+  // Merge seed data (research-verified projects not on 购房通)
+  if (existsSync(SEED_FILE)) {
+    const seedData = JSON.parse(readFileSync(SEED_FILE, "utf-8"));
+    for (const sp of seedData) {
+      if (!seen.has(sp.name)) {
+        seen.add(sp.name);
+        unique.push({
+          name: sp.name,
+          district: sp.district,
+          tags: [],
+          views: null,
+          priceRange: null,
+          location: sp.location || null,
+          priceDesc: sp.priceDesc || null,
+          category: "seed",
+          id: "seed_" + Buffer.from(sp.name).toString("base64").slice(0, 12),
+        });
+      }
+    }
+  }
+
+  console.log(`\nScraped: ${unique.length - (existsSync(SEED_FILE) ? JSON.parse(readFileSync(SEED_FILE, "utf-8")).length : 0)}, With seed: ${unique.length}`);
 
   // Save data
   const outputPath = join(DATA_DIR, "projects.json");
