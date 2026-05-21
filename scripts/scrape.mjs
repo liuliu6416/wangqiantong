@@ -7,8 +7,8 @@ import { writeFileSync, mkdirSync } from "fs";
 import { join } from "path";
 
 const BASE = "https://www.cdgoufangtong.com";
-const CATEGORIES = ["hot", "forthcoming_sale", "latest_opening", "latest_lot_number", "surplus"];
-const MAX_PAGES = 5;
+const CATEGORIES = ["hot", "forthcoming_sale", "latest_opening", "surplus", "search_hide"];
+const MAX_PAGES = 20;
 const DATA_DIR = join(import.meta.dirname, "..", "public", "data");
 
 async function fetchPage(path) {
