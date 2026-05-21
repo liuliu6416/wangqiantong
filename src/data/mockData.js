@@ -1,316 +1,198 @@
 /**
- * 模拟数据 — 成都市商品房网签备案信息
- * 结构对齐成都市公共数据开放平台字段
+ * 成都市商品房网签数据 — 全区域楼盘库
+ * 数据覆盖成都 20+ 区县，项目信息参照各区域实际楼盘特征
+ * 接口预留：export 函数签名与未来真实 API 对齐，切换时替换实现即可
  */
 
-const mockProjects = [
-  {
-    id: "p001",
-    name: "蜀都花园",
-    recordName: "蜀都花园二期",
-    presaleNumber: "蓉预售字第51010020240001号",
-    developer: "成都蜀都置业有限公司",
-    address: "高新区天府大道南段1688号",
-    region: "高新区",
-    totalUnits: 432,
-    soldUnits: 318,
-    buildings: ["b001", "b002", "b003", "b004"],
-  },
-  {
-    id: "p002",
-    name: "锦城湖畔",
-    recordName: "锦城湖畔小区",
-    presaleNumber: "蓉预售字第51010020240015号",
-    developer: "成都锦城房地产开发有限公司",
-    address: "天府新区兴隆湖东岸99号",
-    region: "天府新区",
-    totalUnits: 256,
-    soldUnits: 189,
-    buildings: ["b101", "b102", "b103"],
-  },
-  {
-    id: "p003",
-    name: "龙湖天街名邸",
-    recordName: "龙湖天街名邸项目",
-    presaleNumber: "蓉预售字第51010020240032号",
-    developer: "成都龙湖地产发展有限公司",
-    address: "成华区建设路188号",
-    region: "成华区",
-    totalUnits: 520,
-    soldUnits: 401,
-    buildings: ["b201", "b202", "b203", "b204", "b205"],
-  },
-  {
-    id: "p004",
-    name: "万科翡翠公园",
-    recordName: "万科翡翠公园一期",
-    presaleNumber: "蓉预售字第51010020240058号",
-    developer: "成都万科房地产有限公司",
-    address: "锦江区东大街下东大街段99号",
-    region: "锦江区",
-    totalUnits: 180,
-    soldUnits: 52,
-    buildings: ["b301", "b302"],
-  },
-  {
-    id: "p005",
-    name: "中海锦城",
-    recordName: "中海锦城北区",
-    presaleNumber: "蓉预售字第51010020240076号",
-    developer: "成都中海地产有限公司",
-    address: "青羊区光华大道一段88号",
-    region: "青羊区",
-    totalUnits: 340,
-    soldUnits: 340,
-    buildings: ["b401", "b402", "b403"],
-  },
+// ==================== 楼盘定义 ====================
+const PROJECT_DEFS = [
+  // ---------- 高新区 ----------
+  { id:"gx01", name:"蜀都花园", rec:"蜀都花园二期", ps:"蓉预售字第51010020241001号", dev:"成都蜀都置业有限公司", addr:"高新区天府大道南段1688号", region:"高新区", blds:[{n:"1栋",t:"高层",f:26,u4:4},{n:"2栋",t:"高层",f:26,u4:4},{n:"3栋",t:"小高层",f:18,u4:3},{n:"4栋",t:"小高层",f:18,u4:3}] },
+  { id:"gx02", name:"金融城央", rec:"金融城央华府", ps:"蓉预售字第51010020241002号", dev:"成都金融城置业有限公司", addr:"高新区交子大道399号", region:"高新区", blds:[{n:"A座",t:"超高层",f:42,u4:4},{n:"B座",t:"超高层",f:42,u4:4},{n:"C座",t:"高层",f:30,u4:3}] },
+  { id:"gx03", name:"大源西派", rec:"大源西派澜岸", ps:"蓉预售字第51010020241003号", dev:"成都中铁建房地产有限公司", addr:"高新区大源南街288号", region:"高新区", blds:[{n:"1栋",t:"高层",f:32,u4:4},{n:"2栋",t:"高层",f:32,u4:4},{n:"3栋",t:"高层",f:32,u4:4},{n:"4栋",t:"小高层",f:18,u4:2},{n:"5栋",t:"小高层",f:18,u4:2}] },
+  { id:"gx04", name:"新川时代", rec:"新川时代天境", ps:"蓉预售字第51010020241004号", dev:"成都万科房地产有限公司", addr:"高新区新川路888号", region:"高新区", blds:[{n:"1号楼",t:"高层",f:28,u4:3},{n:"2号楼",t:"高层",f:28,u4:3},{n:"3号楼",t:"高层",f:28,u4:3}] },
+
+  // ---------- 天府新区 ----------
+  { id:"tf01", name:"锦城湖畔", rec:"锦城湖畔小区", ps:"蓉预售字第51010020241011号", dev:"成都锦城房地产开发有限公司", addr:"天府新区兴隆湖东岸99号", region:"天府新区", blds:[{n:"A座",t:"高层",f:32,u4:4},{n:"B座",t:"高层",f:32,u4:3},{n:"C座",t:"小高层",f:16,u4:3}] },
+  { id:"tf02", name:"麓湖生态城", rec:"麓湖生态城澜屿", ps:"蓉预售字第51010020241012号", dev:"成都万华投资集团有限公司", addr:"天府新区麓湖生态城天府大道旁", region:"天府新区", blds:[{n:"澜屿1栋",t:"超高层",f:38,u4:4},{n:"澜屿2栋",t:"超高层",f:38,u4:4},{n:"澜屿3栋",t:"高层",f:24,u4:2},{n:"澜湾1栋",t:"小高层",f:14,u4:2}] },
+  { id:"tf03", name:"天府公园未来城", rec:"天府公园未来城二期", ps:"蓉预售字第51010020241013号", dev:"成都天投地产开发有限公司", addr:"天府新区宁波路东段666号", region:"天府新区", blds:[{n:"1栋",t:"高层",f:30,u4:4},{n:"2栋",t:"高层",f:30,u4:4},{n:"3栋",t:"高层",f:30,u4:4},{n:"4栋",t:"小高层",f:18,u4:3},{n:"5栋",t:"小高层",f:18,u4:3},{n:"6栋",t:"洋房",f:8,u4:2}] },
+
+  // ---------- 锦江区 ----------
+  { id:"jj01", name:"万科翡翠公园", rec:"万科翡翠公园一期", ps:"蓉预售字第51010020241021号", dev:"成都万科房地产有限公司", addr:"锦江区东大街下东大街段99号", region:"锦江区", blds:[{n:"1幢",t:"高层",f:24,u4:3},{n:"2幢",t:"高层",f:24,u4:2}] },
+  { id:"jj02", name:"仁恒滨河湾", rec:"仁恒滨河湾三期", ps:"蓉预售字第51010020241022号", dev:"仁恒置地（成都）有限公司", addr:"锦江区二环路东四段298号", region:"锦江区", blds:[{n:"3号楼",t:"超高层",f:45,u4:4},{n:"4号楼",t:"超高层",f:45,u4:4},{n:"5号楼",t:"高层",f:28,u4:3}] },
+  { id:"jj03", name:"锦江天玺", rec:"锦江天玺名邸", ps:"蓉预售字第51010020241023号", dev:"成都德商置业有限公司", addr:"锦江区琉璃路588号", region:"锦江区", blds:[{n:"A栋",t:"高层",f:30,u4:4},{n:"B栋",t:"高层",f:30,u4:4}] },
+
+  // ---------- 青羊区 ----------
+  { id:"qy01", name:"中海锦城", rec:"中海锦城北区", ps:"蓉预售字第51010020241031号", dev:"成都中海地产有限公司", addr:"青羊区光华大道一段88号", region:"青羊区", blds:[{n:"1栋",t:"高层",f:30,u4:3},{n:"2栋",t:"高层",f:30,u4:3},{n:"3栋",t:"高层",f:30,u4:3}] },
+  { id:"qy02", name:"绿地锦天府", rec:"绿地锦天府项目", ps:"蓉预售字第51010020241032号", dev:"绿地集团成都置业有限公司", addr:"青羊区苏坡东路188号", region:"青羊区", blds:[{n:"1号楼",t:"高层",f:32,u4:4},{n:"2号楼",t:"高层",f:32,u4:4},{n:"3号楼",t:"高层",f:32,u4:4},{n:"4号楼",t:"小高层",f:18,u4:2}] },
+  { id:"qy03", name:"宽窄巷子院", rec:"宽窄院子", ps:"蓉预售字第51010020241033号", dev:"成都文旅置业有限公司", addr:"青羊区长顺街88号", region:"青羊区", blds:[{n:"南院",t:"洋房",f:6,u4:2},{n:"北院",t:"洋房",f:6,u4:2}] },
+
+  // ---------- 金牛区 ----------
+  { id:"jn01", name:"保利时代", rec:"保利时代广场", ps:"蓉预售字第51010020241041号", dev:"保利（成都）实业有限公司", addr:"金牛区花照壁东街188号", region:"金牛区", blds:[{n:"1栋",t:"超高层",f:38,u4:4},{n:"2栋",t:"超高层",f:38,u4:4},{n:"3栋",t:"高层",f:26,u4:3},{n:"4栋",t:"高层",f:26,u4:3}] },
+  { id:"jn02", name:"华侨城天屿", rec:"华侨城天屿二期", ps:"蓉预售字第51010020241042号", dev:"成都天府华侨城实业发展有限公司", addr:"金牛区西华大道6号", region:"金牛区", blds:[{n:"叠拼1栋",t:"叠拼",f:4,u4:2},{n:"叠拼2栋",t:"叠拼",f:4,u4:2},{n:"高层1栋",t:"高层",f:28,u4:4}] },
+
+  // ---------- 武侯区 ----------
+  { id:"wh01", name:"武侯金茂府", rec:"武侯金茂府二期", ps:"蓉预售字第51010020241051号", dev:"成都金茂置业有限公司", addr:"武侯区铁佛路68号", region:"武侯区", blds:[{n:"1栋",t:"高层",f:26,u4:4},{n:"2栋",t:"高层",f:26,u4:4},{n:"3栋",t:"小高层",f:16,u4:2}] },
+  { id:"wh02", name:"桐梓林壹号", rec:"桐梓林壹号院", ps:"蓉预售字第51010020241052号", dev:"成都蓝光地产发展有限公司", addr:"武侯区桐梓林北路168号", region:"武侯区", blds:[{n:"A座",t:"高层",f:24,u4:3},{n:"B座",t:"高层",f:24,u4:3}] },
+  { id:"wh03", name:"双楠悦府", rec:"双楠悦府项目", ps:"蓉预售字第51010020241053号", dev:"成都朗基地产有限公司", addr:"武侯区二环路西一段99号", region:"武侯区", blds:[{n:"1号楼",t:"高层",f:28,u4:4},{n:"2号楼",t:"高层",f:28,u4:4}] },
+
+  // ---------- 成华区 ----------
+  { id:"ch01", name:"龙湖天街名邸", rec:"龙湖天街名邸项目", ps:"蓉预售字第51010020241061号", dev:"成都龙湖地产发展有限公司", addr:"成华区建设路188号", region:"成华区", blds:[{n:"1号楼",t:"超高层",f:40,u4:3},{n:"2号楼",t:"超高层",f:40,u4:3},{n:"3号楼",t:"高层",f:28,u4:3},{n:"4号楼",t:"高层",f:28,u4:3},{n:"5号楼",t:"小高层",f:18,u4:3}] },
+  { id:"ch02", name:"华润二十四城", rec:"华润二十四城第九期", ps:"蓉预售字第51010020241062号", dev:"华润置地（成都）有限公司", addr:"成华区双庆路99号", region:"成华区", blds:[{n:"九期1栋",t:"超高层",f:42,u4:4},{n:"九期2栋",t:"超高层",f:42,u4:4},{n:"九期3栋",t:"高层",f:30,u4:4}] },
+  { id:"ch03", name:"首创国际城", rec:"首创国际城三期", ps:"蓉预售字第51010020241063号", dev:"首创置业成都有限公司", addr:"成华区和美东路168号", region:"成华区", blds:[{n:"3-1栋",t:"高层",f:26,u4:3},{n:"3-2栋",t:"高层",f:26,u4:3},{n:"3-3栋",t:"小高层",f:16,u4:2}] },
+
+  // ---------- 龙泉驿区 ----------
+  { id:"lq01", name:"龙泉世茂城", rec:"世茂城五期", ps:"蓉预售字第51010020241071号", dev:"成都世茂房地产开发有限公司", addr:"龙泉驿区大面镇成龙大道1888号", region:"龙泉驿区", blds:[{n:"5-1栋",t:"高层",f:30,u4:4},{n:"5-2栋",t:"高层",f:30,u4:4},{n:"5-3栋",t:"高层",f:30,u4:4}] },
+  { id:"lq02", name:"东山国际", rec:"东山国际新城", ps:"蓉预售字第51010020241072号", dev:"成都东山国际新城开发有限公司", addr:"龙泉驿区东山国际大道88号", region:"龙泉驿区", blds:[{n:"D区1栋",t:"高层",f:28,u4:3},{n:"D区2栋",t:"高层",f:28,u4:3},{n:"D区3栋",t:"小高层",f:16,u4:2},{n:"D区4栋",t:"小高层",f:16,u4:2}] },
+  { id:"lq03", name:"大面春风里", rec:"春风里项目", ps:"蓉预售字第51010020241073号", dev:"成都兴城人居地产投资集团", addr:"龙泉驿区大面街道驿都大道66号", region:"龙泉驿区", blds:[{n:"1栋",t:"高层",f:26,u4:4},{n:"2栋",t:"高层",f:26,u4:4},{n:"3栋",t:"高层",f:26,u4:4}] },
+
+  // ---------- 双流区 ----------
+  { id:"sl01", name:"东升花园", rec:"东升花园城", ps:"蓉预售字第51010020241081号", dev:"成都双流万达房地产开发有限公司", addr:"双流区东升街道双楠大道999号", region:"双流区", blds:[{n:"1栋",t:"高层",f:24,u4:4},{n:"2栋",t:"高层",f:24,u4:4},{n:"3栋",t:"小高层",f:14,u4:2}] },
+  { id:"sl02", name:"航空港悦城", rec:"悦城项目", ps:"蓉预售字第51010020241082号", dev:"成都蓝光发展股份有限公司", addr:"双流区西航港街道机场路168号", region:"双流区", blds:[{n:"A区1栋",t:"高层",f:28,u4:3},{n:"A区2栋",t:"高层",f:28,u4:3},{n:"A区3栋",t:"高层",f:28,u4:3}] },
+
+  // ---------- 温江区 ----------
+  { id:"wj01", name:"珠江御景湾", rec:"珠江御景湾二期", ps:"蓉预售字第51010020241091号", dev:"成都珠江投资有限公司", addr:"温江区光华大道三段1818号", region:"温江区", blds:[{n:"1栋",t:"高层",f:30,u4:4},{n:"2栋",t:"高层",f:30,u4:4},{n:"3栋",t:"高层",f:30,u4:4},{n:"4栋",t:"小高层",f:16,u4:2}] },
+  { id:"wj02", name:"佳兆业金域", rec:"金域华府", ps:"蓉预售字第51010020241092号", dev:"佳兆业成都房地产开发有限公司", addr:"温江区柳城街道凤溪大道333号", region:"温江区", blds:[{n:"A栋",t:"高层",f:26,u4:3},{n:"B栋",t:"高层",f:26,u4:3},{n:"C栋",t:"小高层",f:16,u4:2}] },
+
+  // ---------- 郫都区 ----------
+  { id:"pd01", name:"郫都万达城", rec:"万达城郫都项目", ps:"蓉预售字第51010020241101号", dev:"成都万达城投资有限公司", addr:"郫都区郫筒街道望丛东路88号", region:"郫都区", blds:[{n:"1号楼",t:"高层",f:28,u4:4},{n:"2号楼",t:"高层",f:28,u4:4},{n:"3号楼",t:"高层",f:28,u4:4}] },
+  { id:"pd02", name:"蓝光幸福满庭", rec:"幸福满庭二期", ps:"蓉预售字第51010020241102号", dev:"成都蓝光和骏置业有限公司", addr:"郫都区红光镇广场路66号", region:"郫都区", blds:[{n:"1栋",t:"高层",f:28,u4:3},{n:"2栋",t:"高层",f:28,u4:3},{n:"3栋",t:"高层",f:28,u4:3},{n:"4栋",t:"小高层",f:18,u4:2}] },
+
+  // ---------- 新都区 ----------
+  { id:"xd01", name:"恒大御府", rec:"恒大御府二期", ps:"蓉预售字第51010020241111号", dev:"恒大地产集团成都有限公司", addr:"新都区新都街道育英路188号", region:"新都区", blds:[{n:"1栋",t:"高层",f:32,u4:4},{n:"2栋",t:"高层",f:32,u4:4},{n:"3栋",t:"高层",f:32,u4:4},{n:"4栋",t:"小高层",f:18,u4:3}] },
+  { id:"xd02", name:"万科五龙山", rec:"五龙山公园项目", ps:"蓉预售字第51010020241112号", dev:"成都万科房地产有限公司", addr:"新都区三河街道五龙山路99号", region:"新都区", blds:[{n:"A区1栋",t:"洋房",f:6,u4:2},{n:"A区2栋",t:"洋房",f:6,u4:2},{n:"B区1栋",t:"高层",f:24,u4:3}] },
+
+  // ---------- 青白江区 ----------
+  { id:"qb01", name:"青白江万达", rec:"青白江万达广场", ps:"蓉预售字第51010020241121号", dev:"成都青白江万达广场置业有限公司", addr:"青白江区凤凰大道一段88号", region:"青白江区", blds:[{n:"1号楼",t:"高层",f:26,u4:3},{n:"2号楼",t:"高层",f:26,u4:3},{n:"3号楼",t:"高层",f:26,u4:3}] },
+  { id:"qb02", name:"凤凰岛壹号", rec:"凤凰岛项目", ps:"蓉预售字第51010020241122号", dev:"成都兴城人居地产投资集团", addr:"青白江区凤凰湖旁", region:"青白江区", blds:[{n:"东区1栋",t:"高层",f:24,u4:3},{n:"东区2栋",t:"高层",f:24,u4:3}] },
+
+  // ---------- 新津区 ----------
+  { id:"xj01", name:"新津恒大", rec:"恒大岷江新城", ps:"蓉预售字第51010020241131号", dev:"恒大地产集团成都有限公司", addr:"新津区岷江大道二段88号", region:"新津区", blds:[{n:"1栋",t:"高层",f:28,u4:3},{n:"2栋",t:"高层",f:28,u4:3},{n:"3栋",t:"小高层",f:16,u4:2}] },
+  { id:"xj02", name:"花源镇壹号", rec:"花源壹号院", ps:"蓉预售字第51010020241132号", dev:"成都蓝光发展股份有限公司", addr:"新津区花源镇花源大道88号", region:"新津区", blds:[{n:"A栋",t:"高层",f:22,u4:3},{n:"B栋",t:"高层",f:22,u4:3}] },
+
+  // ---------- 都江堰市 ----------
+  { id:"djy01", name:"都江堰万达城", rec:"成都万达城文旅项目", ps:"蓉预售字第51010020241141号", dev:"成都万达城投资有限公司", addr:"都江堰市玉堂镇滨江路88号", region:"都江堰市", blds:[{n:"文旅1栋",t:"高层",f:24,u4:4},{n:"文旅2栋",t:"高层",f:24,u4:4},{n:"文旅3栋",t:"高层",f:24,u4:4},{n:"文旅4栋",t:"洋房",f:8,u4:2}] },
+  { id:"djy02", name:"青城山居", rec:"青城山居度假项目", ps:"蓉预售字第51010020241142号", dev:"成都置信实业（集团）有限公司", addr:"都江堰市青城山镇大三路66号", region:"都江堰市", blds:[{n:"山居1栋",t:"洋房",f:6,u4:2},{n:"山居2栋",t:"洋房",f:6,u4:2}] },
+
+  // ---------- 彭州市 ----------
+  { id:"pz01", name:"彭州碧桂园", rec:"碧桂园彭州项目", ps:"蓉预售字第51010020241151号", dev:"碧桂园成都置业有限公司", addr:"彭州市天彭街道牡丹大道88号", region:"彭州市", blds:[{n:"1栋",t:"高层",f:26,u4:3},{n:"2栋",t:"高层",f:26,u4:3},{n:"3栋",t:"高层",f:26,u4:3}] },
+
+  // ---------- 邛崃市 ----------
+  { id:"ql01", name:"邛崃恒大", rec:"恒大邛崃项目", ps:"蓉预售字第51010020241161号", dev:"恒大地产集团成都有限公司", addr:"邛崃市临邛街道凤凰大道99号", region:"邛崃市", blds:[{n:"1号楼",t:"高层",f:24,u4:3},{n:"2号楼",t:"高层",f:24,u4:3}] },
+
+  // ---------- 崇州市 ----------
+  { id:"cz01", name:"崇州万达", rec:"崇州万达广场", ps:"蓉预售字第51010020241171号", dev:"成都崇州万达广场置业有限公司", addr:"崇州市崇阳街道永康东路88号", region:"崇州市", blds:[{n:"A栋",t:"高层",f:26,u4:3},{n:"B栋",t:"高层",f:26,u4:3},{n:"C栋",t:"小高层",f:18,u4:2}] },
+
+  // ---------- 简阳市 ----------
+  { id:"jy01", name:"简阳新城", rec:"简阳新城一期", ps:"蓉预售字第51010020241181号", dev:"成都兴城投资集团有限公司", addr:"简阳市射洪坝街道人民路88号", region:"简阳市", blds:[{n:"1栋",t:"高层",f:28,u4:3},{n:"2栋",t:"高层",f:28,u4:3},{n:"3栋",t:"高层",f:28,u4:3},{n:"4栋",t:"小高层",f:18,u4:2}] },
+
+  // ---------- 金堂县 ----------
+  { id:"jt01", name:"金堂恒大", rec:"恒大御景半岛", ps:"蓉预售字第51010020241191号", dev:"恒大地产集团成都有限公司", addr:"金堂县赵镇街道滨江路88号", region:"金堂县", blds:[{n:"1栋",t:"高层",f:30,u4:3},{n:"2栋",t:"高层",f:30,u4:3},{n:"3栋",t:"高层",f:30,u4:3}] },
+  { id:"jt02", name:"金堂碧桂园", rec:"碧桂园金堂项目", ps:"蓉预售字第51010020241192号", dev:"碧桂园成都置业有限公司", addr:"金堂县赵镇街道金泉路66号", region:"金堂县", blds:[{n:"A栋",t:"高层",f:24,u4:3},{n:"B栋",t:"高层",f:24,u4:3},{n:"C栋",t:"小高层",f:16,u4:2}] },
+
+  // ---------- 大邑县 ----------
+  { id:"dy01", name:"大邑花水湾", rec:"花水湾温泉度假项目", ps:"蓉预售字第51010020241201号", dev:"成都花水湾开发有限公司", addr:"大邑县花水湾镇温泉大道88号", region:"大邑县", blds:[{n:"A区1栋",t:"洋房",f:6,u4:2},{n:"A区2栋",t:"洋房",f:6,u4:2},{n:"B区1栋",t:"高层",f:18,u4:3}] },
+
+  // ---------- 蒲江县 ----------
+  { id:"pj01", name:"蒲江新城", rec:"蒲江新城一期", ps:"蓉预售字第51010020241211号", dev:"成都兴城人居地产投资集团", addr:"蒲江县鹤山街道朝阳大道88号", region:"蒲江县", blds:[{n:"1栋",t:"高层",f:22,u4:3},{n:"2栋",t:"高层",f:22,u4:3}] },
 ];
 
-const buildingMap = {
-  // === 蜀都花园 ===
-  b001: {
-    id: "b001",
-    projectId: "p001",
-    name: "1栋",
-    type: "高层",
-    floors: 26,
-    units: [
-      { room: "1-101", floor: 1, usage: "住宅", buildArea: 118.5, innerArea: 96.2, price: 28500, status: "已备案" },
-      { room: "1-102", floor: 1, usage: "住宅", buildArea: 95.3, innerArea: 77.1, price: 27200, status: "已备案" },
-      { room: "1-103", floor: 1, usage: "住宅", buildArea: 125.0, innerArea: 101.5, price: 29300, status: "已备案" },
-      { room: "1-104", floor: 1, usage: "住宅", buildArea: 88.6, innerArea: 71.8, price: 26800, status: "已备案" },
-      { room: "1-201", floor: 2, usage: "住宅", buildArea: 118.5, innerArea: 96.2, price: 28700, status: "已网签" },
-      { room: "1-202", floor: 2, usage: "住宅", buildArea: 95.3, innerArea: 77.1, price: 27400, status: "已备案" },
-      { room: "1-203", floor: 2, usage: "住宅", buildArea: 125.0, innerArea: 101.5, price: 29500, status: "未售" },
-      { room: "1-204", floor: 2, usage: "住宅", buildArea: 88.6, innerArea: 71.8, price: 27000, status: "未售" },
-      { room: "1-301", floor: 3, usage: "住宅", buildArea: 118.5, innerArea: 96.2, price: 28900, status: "已备案" },
-      { room: "1-302", floor: 3, usage: "住宅", buildArea: 95.3, innerArea: 77.1, price: 27600, status: "已网签" },
-      { room: "1-303", floor: 3, usage: "住宅", buildArea: 125.0, innerArea: 101.5, price: 29700, status: "未售" },
-      { room: "1-304", floor: 3, usage: "住宅", buildArea: 88.6, innerArea: 71.8, price: 27200, status: "已认购" },
-      { room: "1-501", floor: 5, usage: "住宅", buildArea: 118.5, innerArea: 96.2, price: 29300, status: "已备案" },
-      { room: "1-502", floor: 5, usage: "住宅", buildArea: 95.3, innerArea: 77.1, price: 28000, status: "未售" },
-      { room: "1-503", floor: 5, usage: "住宅", buildArea: 125.0, innerArea: 101.5, price: 30100, status: "已备案" },
-      { room: "1-504", floor: 5, usage: "住宅", buildArea: 88.6, innerArea: 71.8, price: 27600, status: "已网签" },
-    ],
-  },
-  b002: {
-    id: "b002",
-    projectId: "p001",
-    name: "2栋",
-    type: "高层",
-    floors: 26,
-    units: [
-      { room: "2-101", floor: 1, usage: "住宅", buildArea: 108.0, innerArea: 87.5, price: 27800, status: "已备案" },
-      { room: "2-102", floor: 1, usage: "住宅", buildArea: 108.0, innerArea: 87.5, price: 27800, status: "已备案" },
-      { room: "2-103", floor: 1, usage: "住宅", buildArea: 135.2, innerArea: 109.8, price: 30500, status: "已备案" },
-      { room: "2-104", floor: 1, usage: "住宅", buildArea: 135.2, innerArea: 109.8, price: 30500, status: "已网签" },
-      { room: "2-201", floor: 2, usage: "住宅", buildArea: 108.0, innerArea: 87.5, price: 28000, status: "已网签" },
-      { room: "2-202", floor: 2, usage: "住宅", buildArea: 108.0, innerArea: 87.5, price: 28000, status: "已备案" },
-      { room: "2-203", floor: 2, usage: "住宅", buildArea: 135.2, innerArea: 109.8, price: 30700, status: "未售" },
-      { room: "2-204", floor: 2, usage: "住宅", buildArea: 135.2, innerArea: 109.8, price: 30700, status: "未售" },
-      { room: "2-301", floor: 3, usage: "住宅", buildArea: 108.0, innerArea: 87.5, price: 28200, status: "已备案" },
-      { room: "2-302", floor: 3, usage: "住宅", buildArea: 108.0, innerArea: 87.5, price: 28200, status: "已备案" },
-      { room: "2-303", floor: 3, usage: "住宅", buildArea: 135.2, innerArea: 109.8, price: 30900, status: "未售" },
-      { room: "2-304", floor: 3, usage: "住宅", buildArea: 135.2, innerArea: 109.8, price: 30900, status: "已认购" },
-    ],
-  },
-  b003: {
-    id: "b003",
-    projectId: "p001",
-    name: "3栋",
-    type: "小高层",
-    floors: 18,
-    units: [
-      { room: "3-101", floor: 1, usage: "住宅", buildArea: 142.0, innerArea: 118.5, price: 32500, status: "未售" },
-      { room: "3-102", floor: 1, usage: "住宅", buildArea: 142.0, innerArea: 118.5, price: 32500, status: "已备案" },
-      { room: "3-103", floor: 1, usage: "住宅", buildArea: 128.5, innerArea: 106.8, price: 31800, status: "已网签" },
-      { room: "3-201", floor: 2, usage: "住宅", buildArea: 142.0, innerArea: 118.5, price: 32800, status: "未售" },
-      { room: "3-202", floor: 2, usage: "住宅", buildArea: 142.0, innerArea: 118.5, price: 32800, status: "未售" },
-      { room: "3-203", floor: 2, usage: "住宅", buildArea: 128.5, innerArea: 106.8, price: 32000, status: "已备案" },
-      { room: "3-301", floor: 3, usage: "住宅", buildArea: 142.0, innerArea: 118.5, price: 33100, status: "已备案" },
-      { room: "3-302", floor: 3, usage: "住宅", buildArea: 142.0, innerArea: 118.5, price: 33100, status: "已网签" },
-      { room: "3-303", floor: 3, usage: "住宅", buildArea: 128.5, innerArea: 106.8, price: 32300, status: "未售" },
-    ],
-  },
-  b004: {
-    id: "b004",
-    projectId: "p001",
-    name: "4栋",
-    type: "小高层",
-    floors: 18,
-    units: [
-      { room: "4-101", floor: 1, usage: "住宅", buildArea: 110.0, innerArea: 89.5, price: 29000, status: "已备案" },
-      { room: "4-102", floor: 1, usage: "住宅", buildArea: 110.0, innerArea: 89.5, price: 29000, status: "已备案" },
-      { room: "4-103", floor: 1, usage: "商业", buildArea: 58.2, innerArea: 50.1, price: 42000, status: "未售" },
-      { room: "4-201", floor: 2, usage: "住宅", buildArea: 110.0, innerArea: 89.5, price: 29200, status: "已网签" },
-      { room: "4-202", floor: 2, usage: "住宅", buildArea: 110.0, innerArea: 89.5, price: 29200, status: "未售" },
-      { room: "4-203", floor: 2, usage: "商业", buildArea: 58.2, innerArea: 50.1, price: 42200, status: "未售" },
-    ],
-  },
+// ==================== 数据生成引擎 ====================
+const USAGES = ["住宅","住宅","住宅","住宅","住宅","商业"];
+const STATUSES = ["已备案","已备案","已备案","已备案","已网签","已网签","已网签","未售","未售","未售","未售","未售","已认购"];
 
-  // === 锦城湖畔 ===
-  b101: {
-    id: "b101", projectId: "p002", name: "A座", type: "高层", floors: 32,
-    units: [
-      { room: "A-101", floor: 1, usage: "住宅", buildArea: 102.0, innerArea: 82.5, price: 31200, status: "已备案" },
-      { room: "A-102", floor: 1, usage: "住宅", buildArea: 102.0, innerArea: 82.5, price: 31200, status: "已备案" },
-      { room: "A-103", floor: 1, usage: "住宅", buildArea: 89.5, innerArea: 72.0, price: 29800, status: "已网签" },
-      { room: "A-104", floor: 1, usage: "住宅", buildArea: 138.0, innerArea: 112.3, price: 33800, status: "未售" },
-      { room: "A-201", floor: 2, usage: "住宅", buildArea: 102.0, innerArea: 82.5, price: 31500, status: "已备案" },
-      { room: "A-202", floor: 2, usage: "住宅", buildArea: 102.0, innerArea: 82.5, price: 31500, status: "未售" },
-      { room: "A-203", floor: 2, usage: "住宅", buildArea: 89.5, innerArea: 72.0, price: 30100, status: "已备案" },
-      { room: "A-204", floor: 2, usage: "住宅", buildArea: 138.0, innerArea: 112.3, price: 34100, status: "已网签" },
-      { room: "A-301", floor: 3, usage: "住宅", buildArea: 102.0, innerArea: 82.5, price: 31800, status: "未售" },
-      { room: "A-302", floor: 3, usage: "住宅", buildArea: 102.0, innerArea: 82.5, price: 31800, status: "已备案" },
-      { room: "A-303", floor: 3, usage: "住宅", buildArea: 89.5, innerArea: 72.0, price: 30400, status: "已备案" },
-      { room: "A-304", floor: 3, usage: "住宅", buildArea: 138.0, innerArea: 112.3, price: 34400, status: "未售" },
-    ],
-  },
-  b102: {
-    id: "b102", projectId: "p002", name: "B座", type: "高层", floors: 32,
-    units: [
-      { room: "B-101", floor: 1, usage: "住宅", buildArea: 115.0, innerArea: 93.2, price: 32000, status: "已备案" },
-      { room: "B-102", floor: 1, usage: "住宅", buildArea: 115.0, innerArea: 93.2, price: 32000, status: "已备案" },
-      { room: "B-103", floor: 1, usage: "住宅", buildArea: 96.8, innerArea: 78.5, price: 30500, status: "已网签" },
-      { room: "B-201", floor: 2, usage: "住宅", buildArea: 115.0, innerArea: 93.2, price: 32300, status: "未售" },
-      { room: "B-202", floor: 2, usage: "住宅", buildArea: 115.0, innerArea: 93.2, price: 32300, status: "未售" },
-      { room: "B-203", floor: 2, usage: "住宅", buildArea: 96.8, innerArea: 78.5, price: 30800, status: "已备案" },
-      { room: "B-301", floor: 3, usage: "住宅", buildArea: 115.0, innerArea: 93.2, price: 32600, status: "已备案" },
-      { room: "B-302", floor: 3, usage: "住宅", buildArea: 115.0, innerArea: 93.2, price: 32600, status: "已网签" },
-      { room: "B-303", floor: 3, usage: "住宅", buildArea: 96.8, innerArea: 78.5, price: 31100, status: "未售" },
-    ],
-  },
-  b103: {
-    id: "b103", projectId: "p002", name: "C座", type: "小高层", floors: 16,
-    units: [
-      { room: "C-101", floor: 1, usage: "住宅", buildArea: 155.0, innerArea: 128.6, price: 36800, status: "已备案" },
-      { room: "C-102", floor: 1, usage: "住宅", buildArea: 155.0, innerArea: 128.6, price: 36800, status: "已备案" },
-      { room: "C-103", floor: 1, usage: "住宅", buildArea: 130.0, innerArea: 107.5, price: 35200, status: "未售" },
-      { room: "C-201", floor: 2, usage: "住宅", buildArea: 155.0, innerArea: 128.6, price: 37200, status: "已网签" },
-      { room: "C-202", floor: 2, usage: "住宅", buildArea: 155.0, innerArea: 128.6, price: 37200, status: "已备案" },
-      { room: "C-203", floor: 2, usage: "住宅", buildArea: 130.0, innerArea: 107.5, price: 35600, status: "未售" },
-    ],
-  },
-
-  // === 龙湖天街名邸 ===
-  b201: {
-    id: "b201", projectId: "p003", name: "1号楼", type: "超高层", floors: 40,
-    units: [
-      { room: "1-101", floor: 1, usage: "商业", buildArea: 85.0, innerArea: 72.0, price: 48000, status: "未售" },
-      { room: "1-102", floor: 1, usage: "商业", buildArea: 68.5, innerArea: 58.0, price: 46500, status: "已备案" },
-      { room: "1-201", floor: 2, usage: "住宅", buildArea: 98.0, innerArea: 79.2, price: 29800, status: "已备案" },
-      { room: "1-202", floor: 2, usage: "住宅", buildArea: 98.0, innerArea: 79.2, price: 29800, status: "已网签" },
-      { room: "1-203", floor: 2, usage: "住宅", buildArea: 112.5, innerArea: 91.0, price: 30800, status: "已备案" },
-      { room: "1-301", floor: 3, usage: "住宅", buildArea: 98.0, innerArea: 79.2, price: 30000, status: "未售" },
-      { room: "1-302", floor: 3, usage: "住宅", buildArea: 98.0, innerArea: 79.2, price: 30000, status: "已备案" },
-      { room: "1-303", floor: 3, usage: "住宅", buildArea: 112.5, innerArea: 91.0, price: 31000, status: "已备案" },
-    ],
-  },
-  b202: {
-    id: "b202", projectId: "p003", name: "2号楼", type: "超高层", floors: 40,
-    units: [
-      { room: "2-101", floor: 1, usage: "商业", buildArea: 92.0, innerArea: 78.5, price: 49000, status: "已备案" },
-      { room: "2-102", floor: 1, usage: "商业", buildArea: 75.0, innerArea: 63.8, price: 47500, status: "未售" },
-      { room: "2-201", floor: 2, usage: "住宅", buildArea: 105.0, innerArea: 85.0, price: 30500, status: "已备案" },
-      { room: "2-202", floor: 2, usage: "住宅", buildArea: 105.0, innerArea: 85.0, price: 30500, status: "已备案" },
-      { room: "2-203", floor: 2, usage: "住宅", buildArea: 120.0, innerArea: 97.5, price: 31500, status: "已网签" },
-      { room: "2-301", floor: 3, usage: "住宅", buildArea: 105.0, innerArea: 85.0, price: 30700, status: "未售" },
-    ],
-  },
-  b203: { id: "b203", projectId: "p003", name: "3号楼", type: "高层", floors: 28, units: [] },
-  b204: { id: "b204", projectId: "p003", name: "4号楼", type: "高层", floors: 28, units: [] },
-  b205: { id: "b205", projectId: "p003", name: "5号楼", type: "小高层", floors: 18, units: [] },
-
-  // === 万科翡翠公园 ===
-  b301: {
-    id: "b301", projectId: "p004", name: "1幢", type: "高层", floors: 24,
-    units: [
-      { room: "1-101", floor: 1, usage: "住宅", buildArea: 145.0, innerArea: 120.5, price: 38500, status: "未售" },
-      { room: "1-102", floor: 1, usage: "住宅", buildArea: 145.0, innerArea: 120.5, price: 38500, status: "未售" },
-      { room: "1-103", floor: 1, usage: "住宅", buildArea: 128.5, innerArea: 106.2, price: 37200, status: "已认购" },
-      { room: "1-201", floor: 2, usage: "住宅", buildArea: 145.0, innerArea: 120.5, price: 38800, status: "未售" },
-      { room: "1-202", floor: 2, usage: "住宅", buildArea: 145.0, innerArea: 120.5, price: 38800, status: "已备案" },
-      { room: "1-203", floor: 2, usage: "住宅", buildArea: 128.5, innerArea: 106.2, price: 37500, status: "未售" },
-    ],
-  },
-  b302: {
-    id: "b302", projectId: "p004", name: "2幢", type: "高层", floors: 24,
-    units: [
-      { room: "2-101", floor: 1, usage: "住宅", buildArea: 160.0, innerArea: 133.8, price: 39800, status: "未售" },
-      { room: "2-102", floor: 1, usage: "住宅", buildArea: 160.0, innerArea: 133.8, price: 39800, status: "未售" },
-      { room: "2-201", floor: 2, usage: "住宅", buildArea: 160.0, innerArea: 133.8, price: 40100, status: "已备案" },
-      { room: "2-202", floor: 2, usage: "住宅", buildArea: 160.0, innerArea: 133.8, price: 40100, status: "未售" },
-    ],
-  },
-
-  // === 中海锦城 ===
-  b401: {
-    id: "b401", projectId: "p005", name: "1栋", type: "高层", floors: 30,
-    units: [
-      { room: "1-101", floor: 1, usage: "住宅", buildArea: 110.0, innerArea: 89.5, price: 26500, status: "已备案" },
-      { room: "1-102", floor: 1, usage: "住宅", buildArea: 110.0, innerArea: 89.5, price: 26500, status: "已备案" },
-      { room: "1-103", floor: 1, usage: "住宅", buildArea: 93.5, innerArea: 75.8, price: 25800, status: "已备案" },
-      { room: "1-201", floor: 2, usage: "住宅", buildArea: 110.0, innerArea: 89.5, price: 26800, status: "已备案" },
-      { room: "1-202", floor: 2, usage: "住宅", buildArea: 110.0, innerArea: 89.5, price: 26800, status: "已备案" },
-      { room: "1-203", floor: 2, usage: "住宅", buildArea: 93.5, innerArea: 75.8, price: 26000, status: "已备案" },
-    ],
-  },
-  b402: { id: "b402", projectId: "p005", name: "2栋", type: "高层", floors: 30, units: [] },
-  b403: { id: "b403", projectId: "p005", name: "3栋", type: "高层", floors: 30, units: [] },
-};
-
-// 给没有填 units 的楼栋生成一些模拟数据
-Object.values(buildingMap).forEach((b) => {
-  if (b.units.length === 0) {
-    const usages = ["住宅", "住宅", "住宅", "商业"];
-    const statuses = ["已备案", "已备案", "已网签", "未售", "未售", "已认购"];
-    for (let f = 1; f <= Math.min(b.floors, 5); f++) {
-      for (let u = 0; u < 3; u++) {
-        const area = Math.round((80 + Math.random() * 80) * 10) / 10;
-        b.units.push({
-          room: `${f}-${String(u + 1).padStart(2, "0")}${f}`,
-          floor: f,
-          usage: usages[u % usages.length],
-          buildArea: area,
-          innerArea: Math.round(area * 0.81 * 10) / 10,
-          price: Math.round((26000 + Math.random() * 8000) / 100) * 100,
-          status: statuses[Math.floor(Math.random() * statuses.length)],
-        });
-      }
+function generateUnits(buildingDef) {
+  const { f:floors, u4:unitsPerFloor } = buildingDef;
+  const units = [];
+  for (let f = 1; f <= Math.min(floors, 8); f++) {
+    for (let u = 0; u < unitsPerFloor; u++) {
+      const roomCode = u + 1;
+      const baseArea = 80 + Math.random() * 80;
+      const buildArea = Math.round(baseArea * 10) / 10;
+      const innerArea = Math.round(buildArea * (0.78 + Math.random() * 0.06) * 10) / 10;
+      const priceBase = 18000 + Math.random() * 22000;
+      const price = Math.round(priceBase / 100) * 100;
+      units.push({
+        room: `${f}-${String(roomCode).padStart(2,"0")}${f}`,
+        floor: f,
+        usage: USAGES[Math.floor(Math.random() * USAGES.length)],
+        buildArea,
+        innerArea,
+        price,
+        status: STATUSES[Math.floor(Math.random() * STATUSES.length)],
+      });
     }
   }
-});
+  return units;
+}
 
-// 更新 soldUnits
-mockProjects.forEach((p) => {
-  let sold = 0;
-  let total = 0;
-  p.buildings.forEach((bid) => {
-    const b = buildingMap[bid];
-    if (b) {
-      total += b.units.length;
-      sold += b.units.filter((u) => u.status === "已备案" || u.status === "已网签").length;
-    }
+// ==================== 构建完整数据集 ====================
+const projectList = [];
+const buildingMap = {};
+let pidCounter = 0;
+
+PROJECT_DEFS.forEach((def) => {
+  pidCounter++;
+  const project = {
+    id: def.id,
+    name: def.name,
+    recordName: def.rec,
+    presaleNumber: def.ps,
+    developer: def.dev,
+    address: def.addr,
+    region: def.region,
+    totalUnits: 0,
+    soldUnits: 0,
+    buildings: [],
+  };
+
+  def.blds.forEach((bDef, bi) => {
+    const bId = `${def.id}_b${bi}`;
+    const units = generateUnits(bDef);
+    const sold = units.filter(u => u.status === "已备案" || u.status === "已网签").length;
+
+    buildingMap[bId] = {
+      id: bId,
+      projectId: def.id,
+      name: bDef.n,
+      type: bDef.t,
+      floors: bDef.f,
+      units,
+    };
+
+    project.buildings.push(bId);
+    project.totalUnits += units.length;
+    project.soldUnits += sold;
   });
-  p.totalUnits = total;
-  p.soldUnits = sold;
+
+  projectList.push(project);
 });
 
-export function searchProjects(keyword) {
-  if (!keyword || !keyword.trim()) return mockProjects;
+// ==================== 公共 API ====================
+export function searchProjects(keyword, regionFilter) {
+  let list = projectList;
+  if (regionFilter && regionFilter !== "全部") {
+    list = list.filter(p => p.region === regionFilter);
+  }
+  if (!keyword || !keyword.trim()) return list;
   const kw = keyword.trim().toLowerCase();
-  return mockProjects.filter(
-    (p) =>
-      p.name.toLowerCase().includes(kw) ||
-      p.recordName.toLowerCase().includes(kw) ||
-      p.developer.toLowerCase().includes(kw) ||
-      p.region.includes(kw) ||
-      p.presaleNumber.includes(kw)
+  return list.filter(p =>
+    p.name.toLowerCase().includes(kw) ||
+    p.recordName.toLowerCase().includes(kw) ||
+    p.developer.toLowerCase().includes(kw) ||
+    p.region.includes(kw) ||
+    p.presaleNumber.includes(kw) ||
+    p.address.toLowerCase().includes(kw)
   );
 }
 
+export function getAllRegions() {
+  const set = new Set(projectList.map(p => p.region));
+  return ["全部", ...Array.from(set).sort()];
+}
+
 export function getProject(id) {
-  return mockProjects.find((p) => p.id === id) || null;
+  return projectList.find(p => p.id === id) || null;
 }
 
 export function getBuilding(id) {
@@ -320,5 +202,13 @@ export function getBuilding(id) {
 export function getBuildingsByProject(projectId) {
   const project = getProject(projectId);
   if (!project) return [];
-  return project.buildings.map((bid) => buildingMap[bid]).filter(Boolean);
+  return project.buildings.map(bid => buildingMap[bid]).filter(Boolean);
+}
+
+export function getProjectCount() {
+  return projectList.length;
+}
+
+export function getTotalUnits() {
+  return projectList.reduce((s, p) => s + p.totalUnits, 0);
 }
