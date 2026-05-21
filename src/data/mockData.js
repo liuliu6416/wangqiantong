@@ -63,7 +63,7 @@ let buildingMap = {};
 
 async function loadData() {
   try {
-    const res = await fetch("/data/projects.json");
+    const res = await fetch(import.meta.env.BASE_URL + "data/projects.json");
     const projects = await res.json();
 
     projectList = projects.map((p, i) => {
