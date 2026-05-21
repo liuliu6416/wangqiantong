@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  background: #f5f6f8;
+  color: #1a1a2e;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 顶部导航 */
+.app-header {
+  background: linear-gradient(135deg, #1677ff 0%, #0958d9 100%);
+  color: #fff;
+  padding: 12px 16px;
+  padding-top: max(12px, env(safe-area-inset-top));
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+/* 搜索区域 */
+.search-section {
+  background: #fff;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* 项目卡片 */
+.project-card {
+  background: #fff;
+  margin: 12px 16px;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+.project-card:active {
+  background: #fafafa;
+}
+
+.project-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.project-info-row {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-info-row .label {
+  color: #999;
+  flex-shrink: 0;
+}
+
+.project-tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* 统计卡片 */
+.stats-row {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+.stat-number {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #999;
+  margin-top: 4px;
+}
+
+.stat-card.sold .stat-number { color: #1677ff; }
+.stat-card.unsold .stat-number { color: #52c41a; }
+.stat-card.rate .stat-number { color: #ff7a45; }
+
+/* 楼栋选择 */
+.building-tabs {
+  background: #fff;
+  padding: 12px 16px;
+  margin: 0 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.building-tab {
+  display: inline-block;
+  padding: 8px 18px;
+  margin-right: 8px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  background: #f5f6f8;
+  color: #666;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+
+.building-tab.active {
+  background: #e6f4ff;
+  color: #1677ff;
+  border-color: #1677ff;
+  font-weight: 600;
+}
+
+/* 房源表格 */
+.unit-table-wrap {
+  margin: 12px 16px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+.unit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.unit-table thead {
+  background: #fafafa;
+}
+
+.unit-table th {
+  padding: 10px 8px;
+  text-align: center;
+  font-weight: 500;
+  color: #999;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.unit-table td {
+  padding: 10px 8px;
+  text-align: center;
+  border-bottom: 1px solid #f5f5f5;
+  color: #333;
+}
+
+.unit-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 状态标签 */
+.status-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.status-已备案 { background: #e6f4ff; color: #1677ff; }
+.status-已网签 { background: #f6ffed; color: #52c41a; }
+.status-未售   { background: #fff7e6; color: #fa8c16; }
+.status-已认购 { background: #f0f0f0; color: #8c8c8c; }
+
+/* 楼层分组标题 */
+.floor-group {
+  background: #f5f6f8;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+/* 价格区间 */
+.price-range {
+  margin: 12px 16px;
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.price-range .range-item {
+  text-align: center;
+}
+
+.price-range .range-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff7a45;
+}
+
+.price-range .range-label {
+  font-size: 11px;
+  color: #999;
+  margin-top: 2px;
+}
+
+/* 空状态 */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #ccc;
+}
+
+.empty-state .icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+/* 底部安全区 */
+.safe-bottom {
+  height: env(safe-area-inset-bottom, 20px);
+}
+
+/* 返回按钮 */
+.back-btn {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+}
