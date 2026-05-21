@@ -340,19 +340,6 @@
     "id": "gft_6bqT5rmW55Sf"
   },
   {
-    "name": "万科 产投 熙园甲第",
-    "district": "崇州市",
-    "tags": [
-      "即将取证"
-    ],
-    "views": "44.0w",
-    "priceRange": null,
-    "location": "103.690602,30.618156",
-    "priceDesc": null,
-    "category": "forthcoming_sale",
-    "id": "gft_5LiH56eRIOS6"
-  },
-  {
     "name": "保利天奕",
     "district": "成华区",
     "tags": [
@@ -704,7 +691,7 @@
   },
   {
     "name": "建发海耀",
-    "district": "锦江区",
+    "district": "高新区",
     "tags": [
       "楼盘航拍",
       "双地铁",
@@ -719,7 +706,7 @@
   },
   {
     "name": "新希望 D23国宾",
-    "district": "郫都区",
+    "district": "金牛区",
     "tags": [
       "楼盘航拍",
       "低容积",
@@ -757,7 +744,7 @@
   },
   {
     "name": "金融城·贝宸S1",
-    "district": "锦江区",
+    "district": "高新区",
     "tags": [],
     "views": null,
     "priceRange": null,
@@ -790,7 +777,7 @@
   },
   {
     "name": "交子缦华阁",
-    "district": "锦江区",
+    "district": "高新区",
     "tags": [],
     "views": null,
     "priceRange": null,
@@ -834,7 +821,7 @@
   },
   {
     "name": "金融城交子缦华",
-    "district": "锦江区",
+    "district": "高新区",
     "tags": [],
     "views": null,
     "priceRange": null,
@@ -1945,7 +1932,7 @@
   },
   {
     "name": "保利天府和颂二期",
-    "district": "双流区",
+    "district": "天府新区",
     "tags": [],
     "views": null,
     "priceRange": null,
