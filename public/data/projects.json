@@ -1,0 +1,686 @@
+[
+  {
+    "name": "深业泰樾府",
+    "district": "成华区",
+    "tags": [
+      "楼盘航拍",
+      "教育资源",
+      "3D选房",
+      "三地铁"
+    ],
+    "views": "492.4w",
+    "priceRange": "31737-54937",
+    "location": "104.11175,30.654314",
+    "priceDesc": "31737-54937",
+    "category": "hot",
+    "id": "gft_5rex5Lia5rOw"
+  },
+  {
+    "name": "中粮 青雲府",
+    "district": "青羊区",
+    "tags": [
+      "即将登记"
+    ],
+    "views": "200.1w",
+    "priceRange": "38000-51725",
+    "location": "103.947158,30.665003",
+    "priceDesc": "38000-51725元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_5Lit57KuIOmd"
+  },
+  {
+    "name": "越秀天悦云萃Ⅲ",
+    "district": "成华区",
+    "tags": [
+      "在售"
+    ],
+    "views": "1935.4w",
+    "priceRange": null,
+    "location": "104.13959,30.658888",
+    "priceDesc": "34649-46668元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_6LaK56eA5aSp"
+  },
+  {
+    "name": "玖悦府",
+    "district": "天府新区",
+    "tags": [
+      "楼盘航拍",
+      "刚需首选",
+      "百亩大盘",
+      "教育资源",
+      "品质住宅"
+    ],
+    "views": "3066.4w",
+    "priceRange": null,
+    "location": "104.113743,30.487621",
+    "priceDesc": null,
+    "category": "hot",
+    "id": "gft_546W5oKm5bqc"
+  },
+  {
+    "name": "新绿色 G29元岛",
+    "district": "高新区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁",
+      "低容积",
+      "3D选房"
+    ],
+    "views": "76.5w",
+    "priceRange": null,
+    "location": "104.041979,30.534329",
+    "priceDesc": null,
+    "category": "hot",
+    "id": "gft_5paw57u/6Imy"
+  },
+  {
+    "name": "正成 红麓书院",
+    "district": "郫都区",
+    "tags": [
+      "楼盘航拍",
+      "低容积",
+      "3D选房"
+    ],
+    "views": "97.2w",
+    "priceRange": null,
+    "location": "103.946595,30.788935",
+    "priceDesc": "13903-16808元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_5q2j5oiQIOe6"
+  },
+  {
+    "name": "西派天麓",
+    "district": "天府新区",
+    "tags": [
+      "楼盘航拍",
+      "低容积",
+      "近地铁",
+      "教育资源"
+    ],
+    "views": "108.5w",
+    "priceRange": null,
+    "location": "104.078091,30.449418",
+    "priceDesc": null,
+    "category": "hot",
+    "id": "gft_6KW/5rS+5aSp"
+  },
+  {
+    "name": "中铁 先锋艺术城",
+    "district": "金牛区",
+    "tags": [
+      "即将取证"
+    ],
+    "views": "68.3w",
+    "priceRange": null,
+    "location": "104.054981,30.679838",
+    "priceDesc": null,
+    "category": "hot",
+    "id": "gft_5Lit6ZOBIOWF"
+  },
+  {
+    "name": "金牛西派御府",
+    "district": "金牛区",
+    "tags": [
+      "楼盘航拍",
+      "金牛区第一座西派",
+      "教育资源",
+      "3D选房",
+      "四地铁"
+    ],
+    "views": "1179.2w",
+    "priceRange": "31195-40705",
+    "location": "104.031846,30.703759",
+    "priceDesc": "31195-40705",
+    "category": "hot",
+    "id": "gft_6YeR54mb6KW/"
+  },
+  {
+    "name": "中建 匠宸元启",
+    "district": "成华区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁",
+      "教育资源"
+    ],
+    "views": "513.5w",
+    "priceRange": "33500-33750",
+    "location": "104.134169,30.689516",
+    "priceDesc": "33500-33750",
+    "category": "hot",
+    "id": "gft_5Lit5bu6IOWM"
+  },
+  {
+    "name": "天府 光华云境",
+    "district": "青羊区",
+    "tags": [
+      "楼盘航拍",
+      "配套成熟",
+      "品牌房企",
+      "双地铁",
+      "教育资源",
+      "3D选房",
+      "准现房"
+    ],
+    "views": "627.5w",
+    "priceRange": "24724-35141",
+    "location": "103.948376,30.670814",
+    "priceDesc": "24724-35141",
+    "category": "hot",
+    "id": "gft_5aSp5bqcIOWF"
+  },
+  {
+    "name": "华润置地 天宸上院",
+    "district": "成华区",
+    "tags": [
+      "楼盘航拍",
+      "低容积",
+      "别墅",
+      "双地铁"
+    ],
+    "views": "774.0w",
+    "priceRange": "33056-37066",
+    "location": "104.146754,30.658896",
+    "priceDesc": "33056-37066元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_5Y2O5ram572u"
+  },
+  {
+    "name": "马厂坝TOD 青雲九天",
+    "district": "青羊区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁",
+      "低容积",
+      "教育资源",
+      "3D选房"
+    ],
+    "views": "690.0w",
+    "priceRange": "24032-29161",
+    "location": "103.916269,30.678346",
+    "priceDesc": "24032-29161元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_6ams5Y6C5Z2d"
+  },
+  {
+    "name": "中铁卓萃",
+    "district": "天府新区",
+    "tags": [
+      "楼盘航拍",
+      "低容积",
+      "近地铁",
+      "教育资源",
+      "3D选房",
+      "户户大花园"
+    ],
+    "views": "454.9w",
+    "priceRange": "29517-32308",
+    "location": "104.107908,30.496785",
+    "priceDesc": "29517-32308元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_5Lit6ZOB5Y2T"
+  },
+  {
+    "name": "龙湖滨江峯萃",
+    "district": "成华区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁"
+    ],
+    "views": "254.6w",
+    "priceRange": null,
+    "location": "104.131844,30.641768",
+    "priceDesc": "33892-40069元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_6b6Z5rmW5ruo"
+  },
+  {
+    "name": "华天 龙湖 杉峯",
+    "district": "成华区",
+    "tags": [
+      "楼盘航拍",
+      "教育资源",
+      "3D选房",
+      "三地铁"
+    ],
+    "views": "626.2w",
+    "priceRange": "31811-45874",
+    "location": "104.12811,30.667581",
+    "priceDesc": "31811-45874",
+    "category": "hot",
+    "id": "gft_5Y2O5aSpIOm+"
+  },
+  {
+    "name": "国宾泊萃",
+    "district": "金牛区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁",
+      "低容积",
+      "教育资源",
+      "3D选房"
+    ],
+    "views": "597.9w",
+    "priceRange": "19782-24258",
+    "location": "103.999863,30.743415",
+    "priceDesc": "19782-24258",
+    "category": "hot",
+    "id": "gft_5Zu95a6+5rOK"
+  },
+  {
+    "name": "保利金沙天曜",
+    "district": "青羊区",
+    "tags": [
+      "在售"
+    ],
+    "views": "211.2w",
+    "priceRange": "33523-63092",
+    "location": "103.995672,30.700395",
+    "priceDesc": "33523-63092",
+    "category": "hot",
+    "id": "gft_5L+d5Yip6YeR"
+  },
+  {
+    "name": "招商玺",
+    "district": "高新区",
+    "tags": [
+      "楼盘航拍",
+      "低容积",
+      "近地铁",
+      "3D选房"
+    ],
+    "views": "596.3w",
+    "priceRange": "53821-68621",
+    "location": "104.038296,30.530069",
+    "priceDesc": "53821-68621元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_5oub5ZWG5466"
+  },
+  {
+    "name": "邦泰 揽境",
+    "district": "新都区",
+    "tags": [
+      "楼盘航拍",
+      "即将登记"
+    ],
+    "views": "159.7w",
+    "priceRange": "11560-15140",
+    "location": "104.183201,30.794475",
+    "priceDesc": "11560-15140元\\u002F㎡",
+    "category": "hot",
+    "id": "gft_6YKm5rOwIOaP"
+  },
+  {
+    "name": "天投 锦悦天成",
+    "district": "天府新区",
+    "tags": [
+      "即将取证",
+      "楼盘航拍",
+      "近地铁",
+      "近医院",
+      "低容积",
+      "教育资源",
+      "3D选房"
+    ],
+    "views": "518.1w",
+    "priceRange": null,
+    "location": "104.062118,30.391465",
+    "priceDesc": null,
+    "category": "forthcoming_sale",
+    "id": "gft_5aSp5oqVIOmU"
+  },
+  {
+    "name": "兴城人居锦润峰荟",
+    "district": "龙泉驿区",
+    "tags": [
+      "即将取证",
+      "楼盘航拍",
+      "以旧换新",
+      "3D选房",
+      "三地铁",
+      "准现房"
+    ],
+    "views": "217.6w",
+    "priceRange": null,
+    "location": "104.168575,30.603817",
+    "priceDesc": null,
+    "category": "forthcoming_sale",
+    "id": "gft_5YW05Z+O5Lq6"
+  },
+  {
+    "name": "麓湖生态城玄鳥湾二期",
+    "district": "天府新区",
+    "tags": [
+      "即将取证",
+      "楼盘航拍",
+      "生态住宅",
+      "教育资源",
+      "3D选房"
+    ],
+    "views": "68.0w",
+    "priceRange": null,
+    "location": "104.054124,30.457564",
+    "priceDesc": null,
+    "category": "forthcoming_sale",
+    "id": "gft_6bqT5rmW55Sf"
+  },
+  {
+    "name": "万科 产投 熙园甲第",
+    "district": "崇州市",
+    "tags": [
+      "即将取证"
+    ],
+    "views": "44.0w",
+    "priceRange": null,
+    "location": "103.690602,30.618156",
+    "priceDesc": null,
+    "category": "forthcoming_sale",
+    "id": "gft_5LiH56eRIOS6"
+  },
+  {
+    "name": "保利天奕",
+    "district": "成华区",
+    "tags": [
+      "即将取证"
+    ],
+    "views": "130.7w",
+    "priceRange": null,
+    "location": "104.131217,30.677668",
+    "priceDesc": null,
+    "category": "forthcoming_sale",
+    "id": "gft_5L+d5Yip5aSp"
+  },
+  {
+    "name": "悦蓉九州",
+    "district": "天府新区",
+    "tags": [
+      "即将取证",
+      "楼盘航拍",
+      "国师级作品",
+      "教育资源",
+      "双地铁"
+    ],
+    "views": "76.0w",
+    "priceRange": null,
+    "location": "104.100478,30.408614",
+    "priceDesc": null,
+    "category": "forthcoming_sale",
+    "id": "gft_5oKm6JOJ5Lmd"
+  },
+  {
+    "name": "锦官天府",
+    "district": "天府新区",
+    "tags": [
+      "即将取证",
+      "楼盘航拍",
+      "保障性住房",
+      "近地铁",
+      "教育资源",
+      "3D选房",
+      "近公园"
+    ],
+    "views": "64.7w",
+    "priceRange": null,
+    "location": "104.10439,30.460693",
+    "priceDesc": null,
+    "category": "forthcoming_sale",
+    "id": "gft_6ZSm5a6Y5aSp"
+  },
+  {
+    "name": "新都楠院",
+    "district": "新都区",
+    "tags": [
+      "楼盘航拍",
+      "近地铁",
+      "3D选房"
+    ],
+    "views": "107.6w",
+    "priceRange": "15690-17618",
+    "location": "104.10268,30.801757",
+    "priceDesc": "15690-17618元\\u002F㎡",
+    "category": "latest_opening",
+    "id": "gft_5paw6YO95qWg"
+  },
+  {
+    "name": "麓湖 丽世缦华",
+    "district": "天府新区",
+    "tags": [
+      "楼盘航拍",
+      "低容积",
+      "教育资源",
+      "3D选房",
+      "近地铁"
+    ],
+    "views": "463.2w",
+    "priceRange": "256858-258966",
+    "location": "104.053092,30.46657",
+    "priceDesc": "256858-258966元\\u002F㎡",
+    "category": "latest_opening",
+    "id": "gft_6bqT5rmWIOS4"
+  },
+  {
+    "name": "金融城 交子缦华 三期",
+    "district": "锦江区",
+    "tags": [
+      "即将登记"
+    ],
+    "views": "24.2w",
+    "priceRange": "56601-87432",
+    "location": "104.109662,30.585114",
+    "priceDesc": "56601-87432元\\u002F㎡",
+    "category": "latest_opening",
+    "id": "gft_6YeR6J6N5Z+O"
+  },
+  {
+    "name": "嘉禾 朗宸府",
+    "district": "双流区",
+    "tags": [
+      "即将登记"
+    ],
+    "views": "73.5w",
+    "priceRange": "23500-28858",
+    "location": "104.008949,30.494371",
+    "priceDesc": "23500-28858元\\u002F㎡",
+    "category": "latest_opening",
+    "id": "gft_5ZiJ56a+IOac"
+  },
+  {
+    "name": "保利创智锦城",
+    "district": "天府新区",
+    "tags": [
+      "即将登记"
+    ],
+    "views": "4.1w",
+    "priceRange": "18935-23045",
+    "location": null,
+    "priceDesc": "18935-23045",
+    "category": "latest_opening",
+    "id": "gft_5L+d5Yip5Yib"
+  },
+  {
+    "name": "雍景 白鹭湾",
+    "district": "锦江区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "白鹭湾芯",
+      "低容积",
+      "3D选房",
+      "近地铁"
+    ],
+    "views": "1238.9w",
+    "priceRange": "36017-47454",
+    "location": null,
+    "priceDesc": "36017-47454",
+    "category": "surplus",
+    "id": "gft_6ZuN5pmvIOeZ"
+  },
+  {
+    "name": "天投 天府公园未来城",
+    "district": "天府新区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "核心地段",
+      "品牌开发商",
+      "总部商务区",
+      "大平层",
+      "教育资源",
+      "3D选房",
+      "准现房",
+      "三地铁"
+    ],
+    "views": "9365.7w",
+    "priceRange": "19041-29791",
+    "location": null,
+    "priceDesc": "19041-29791",
+    "category": "surplus",
+    "id": "gft_5aSp5oqVIOWk"
+  },
+  {
+    "name": "天府半岛 锦澜台",
+    "district": "天府新区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "麓湖旁",
+      "锦江畔",
+      "江景华宅",
+      "近地铁",
+      "教育资源",
+      "低容积",
+      "3D选房"
+    ],
+    "views": "6931.2w",
+    "priceRange": "15315-28169",
+    "location": null,
+    "priceDesc": "15315-28169",
+    "category": "surplus",
+    "id": "gft_5aSp5bqc5Y2K"
+  },
+  {
+    "name": "招商时代公园 天樾境",
+    "district": "天府新区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "天府公园",
+      "改善置业",
+      "教育资源",
+      "3D选房",
+      "三地铁"
+    ],
+    "views": "6638.1w",
+    "priceRange": null,
+    "location": null,
+    "priceDesc": null,
+    "category": "surplus",
+    "id": "gft_5oub5ZWG5pe2"
+  },
+  {
+    "name": "华熙LIVE528",
+    "district": "锦江区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "近主干道",
+      "近学校",
+      "三甲医院",
+      "教育资源",
+      "3D选房",
+      "近地铁"
+    ],
+    "views": "4332.1w",
+    "priceRange": "16586-31334",
+    "location": null,
+    "priceDesc": "16586-31334",
+    "category": "surplus",
+    "id": "gft_5Y2O54aZTElW"
+  },
+  {
+    "name": "中粮保利天府时区",
+    "district": "天府新区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "近地铁",
+      "教育资源"
+    ],
+    "views": "4093.3w",
+    "priceRange": "22486-34904",
+    "location": null,
+    "priceDesc": "22486-34904",
+    "category": "surplus",
+    "id": "gft_5Lit57Ku5L+d"
+  },
+  {
+    "name": "中洲锦城湖岸2期",
+    "district": "高新区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "核心地段",
+      "小高层",
+      "教育资源",
+      "三地铁"
+    ],
+    "views": "3469.0w",
+    "priceRange": "38438-73350",
+    "location": null,
+    "priceDesc": "38438-73350",
+    "category": "surplus",
+    "id": "gft_5Lit5rSy6ZSm"
+  },
+  {
+    "name": "龙湖光屿原著（光年墅）",
+    "district": "龙泉驿区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "城市示范TOD",
+      "以旧换新",
+      "双地铁"
+    ],
+    "views": "3391.7w",
+    "priceRange": null,
+    "location": null,
+    "priceDesc": null,
+    "category": "surplus",
+    "id": "gft_6b6Z5rmW5YWJ"
+  },
+  {
+    "name": "龙潭寺TOD 龙潭九玺",
+    "district": "成华区",
+    "tags": [
+      "在售",
+      "楼盘航拍",
+      "低容积",
+      "近地铁",
+      "教育资源",
+      "3D选房"
+    ],
+    "views": "3117.7w",
+    "priceRange": "15464-18973",
+    "location": null,
+    "priceDesc": "15464-18973",
+    "category": "surplus",
+    "id": "gft_6b6Z5r2t5a+6"
+  },
+  {
+    "name": "中国铁建 西派金沙",
+    "district": "青羊区",
+    "tags": [
+      "在售",
+      "改善置业",
+      "品牌房企",
+      "以旧换新",
+      "教育资源"
+    ],
+    "views": "2903.0w",
+    "priceRange": null,
+    "location": null,
+    "priceDesc": null,
+    "category": "surplus",
+    "id": "gft_5Lit5Zu96ZOB"
+  }
+]
